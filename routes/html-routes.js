@@ -18,16 +18,16 @@ module.exports = function(app) {
   // index route loads view.html
   app.get("/", function(req, res) {
     // change path from /blog to /index.html, and below paths to pages that I want
-    res.sendFile(path.join(__dirname, "../public/html/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/cms.html"));
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
   // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/blog.html"));
+  app.get("/tickets", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/tickets.html"));
   });
 
 };
