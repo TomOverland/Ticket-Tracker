@@ -1,3 +1,7 @@
+// To be deleted
+
+
+
 // This is example code to be used as a reference.
 // This document is where we would make our AJAX calls to interact with our API.
 
