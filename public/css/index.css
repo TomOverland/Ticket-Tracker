@@ -1,9 +1,9 @@
 #main {
-  background-color: aqua;
-  height: 1000px;
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+    background-color: aqua;
+    height: 1000px;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .card {
