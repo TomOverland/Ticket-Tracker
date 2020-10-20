@@ -3,6 +3,9 @@ var sequelize = require("sequelize");
 var path = require("path");
 var fs = require("fs");
 var util = require("util");
+var express = require("express");
+var router = express.Router();
+
 
 module.exports = function(app) {
   // Load index page
