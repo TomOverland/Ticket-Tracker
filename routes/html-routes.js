@@ -7,6 +7,7 @@ var util = require("util");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+
     res.sendFile(path.join(__dirname, "../public/html/user/index.html"));
   });
 
@@ -22,6 +23,7 @@ module.exports = function(app) {
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
+
   });
 };
 
