@@ -1,12 +1,13 @@
-$(window).load(function (){
+$(document).ready(function (){
+    console.log("Page loaded");
+
 
   const $dept = $('#dept-input')
-  const $title = $("title-input");
-  const $description = $("body-input");
+  const $title = $("#title-input");
+  const $description = $("#body-input");
   
   $("#submit1").on("click", function() {
-      $event.preventDefault();
-  
+    console.log("Button press..");
       const ticket = {
           department: $dept.val(),
           title: $title.val(),
@@ -22,7 +23,7 @@ $(window).load(function (){
           }
       });
   
-  })
+  });
   
   
       // $.ajax({
@@ -32,4 +33,4 @@ $(window).load(function (){
       //         console.log(data);
       //     }
       // })
-  })
+  });

@@ -11,7 +11,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
 
-    res.sendFile(path.join(__dirname, "../public/html/user/index.html"));
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
   // Load example page and pass in an example by id
