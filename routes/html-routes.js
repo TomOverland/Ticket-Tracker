@@ -23,6 +23,10 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/viewtickets', function (req, res, next) {
+    res.render('example', {layout: "main"});
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
