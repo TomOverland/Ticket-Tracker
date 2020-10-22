@@ -4,16 +4,33 @@
             <div class="col-8 offset-2">
                 <h1>{{msg}}</h1>
                 <form class="clearfix mb-4" action="POST">
+                    
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <br>
+                            <select name="department" id="department">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Research and Development">Research and Development</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Custodial">Custodial</option>
+                                <option value="Information Technology">Information Technology</option>
+                            </select>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="example-text">Title</label>
                         <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
                             placeholder="Enter Title Here">
                     </div>
+
+
                     <div class="form-group">
                         <label for="example-description">Body</label>
                         <textarea class="form-control" id="example-description" aria-describedby="example-description"
                             placeholder="Please enter a detailed description of the issue."></textarea>
                     </div>
+
+                
                     <button id="submit" class="btn btn-primary float-right">Submit</button>
                 </form>
             </div>

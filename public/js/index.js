@@ -3,6 +3,7 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+const $department = $("#department");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -65,6 +66,7 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var example = {
+    department: $department.val().trim(),
     text: $exampleText.val().trim(),
     description: $exampleDescription.val().trim()
   };
@@ -78,6 +80,7 @@ var handleFormSubmit = function(event) {
     refreshExamples();
   });
 
+  $department.val("");
   $exampleText.val("");
   $exampleDescription.val("");
 };
