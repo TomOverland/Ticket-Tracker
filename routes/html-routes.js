@@ -24,6 +24,7 @@ module.exports = function(app) {
   });
 
   app.get('/viewtickets', function (req, res, next) {
+    // res.render(_view_name_, {layout: _layout_name_})
     res.render('example', {layout: "main"});
   });
 
