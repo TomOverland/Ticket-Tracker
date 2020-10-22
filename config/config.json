@@ -3,12 +3,25 @@
     "username": "root",
     "password": "RFpd#2530",
     "database": "ticket_tracker_db",
+<<<<<<< HEAD
+    "host": "localhost",
+=======
     "host": "127.0.0.1",
+>>>>>>> 3c4c7bac48d8722e7593cbe2e48c8664e3e9196b
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
+<<<<<<< HEAD
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+=======
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -18,6 +31,7 @@
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
+>>>>>>> 3c4c7bac48d8722e7593cbe2e48c8664e3e9196b
     "dialect": "mysql"
   }
 }
