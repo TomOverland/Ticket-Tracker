@@ -2,6 +2,8 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+const Handlebars = require('handlebars')
 
 var db = require("./models");
 
@@ -17,14 +19,16 @@ app.use(express.static("public"));
 app.engine(
   "handlebars",
   exphbs({
-    defaultLayout: "main"
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
   })
 );
 app.set("view engine", "handlebars");
 
+
 // Routes
-require("./routes/api-routes")(app);
-require("./routes/html-routes")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
