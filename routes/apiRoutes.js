@@ -15,6 +15,36 @@ module.exports = function(app) {
     });
   });
 
+  // trying to get view single ticket to post notes
+  app.put("/ticket/api/tickets", function(req, res, next) {
+    
+    const reqNotes = JSON.parse(JSON.stringify(req.body));
+    console.log(reqNotes);
+    db.Ticket.update(
+      {notes: reqNotes.notes},
+      { where: { id: req.params.id }}).then(function(updatedTicket) {
+      res.json(updatedTicket);
+    }).catch(next)
+  })
+
+// Update ticket status to complete
+  app.put("/api/tickets/:id", function(req, res) {
+    console.log("params", req.params);
+    console.log("body", req.body);
+    
+    db.Ticket.update({
+      completed: true
+    }, {
+      where: {
+        id: req.params.id
+      }
+    }.then(function(dbTicket) {
+      res.json(dbTicket);
+    })
+      
+    )
+  })
+
   // Delete a ticket by id
   app.delete("/api/tickets/:id", function(req, res) {
     db.Ticket.destroy({ where: { id: req.params.id } }).then(function(dbTicket) {
