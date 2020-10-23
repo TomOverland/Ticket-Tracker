@@ -8,7 +8,10 @@
                 <ul id="example-list" class="list-group">
                     {{#each examples}}
                     <li data-id="{{this.id}}" class="list-group-item">
-                        <a href="ticket/{{this.id}}">{{this.text}}</a>
+                        <a href="ticket/{{this.id}}">
+                        Department: {{this.department}}
+                        <br>Title: {{this.text}}</a>
+                        <button class="btn btn-success float-right success"> done </button>
                         <button class="btn btn-danger float-right delete">ｘ</button>
                     </li>
                     {{/each}}

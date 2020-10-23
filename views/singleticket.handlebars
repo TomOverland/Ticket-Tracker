@@ -7,7 +7,7 @@
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">Ticket</h5>
-          <p>
+          <p id="single-ticket-id">
             <strong>ID</strong>: {{example.id}}</p>
           <p>
             <p>
@@ -17,8 +17,25 @@
             <strong>Title</strong>: {{example.text}}</p>
           <p>
             <strong>Description:</strong> {{example.description}}</p>
+          
+          <form class="clearfix mb-4" action="PUT">
+              <div class="form-group">
+                        <label for="note-input">Add a Note:</label>
+                        <textarea class="form-control" id="note-input" data-id="{{example.id}}" aria-describedby="note-input"
+                            placeholder="Please enter your notes here."></textarea>
+                        <button id="note-btn" class="btn btn-primary float-right">Submit</button>
+              </div>
+          </form>
           <p>
-            <strong>Notes:</strong> {{example.notes}}</p>
+            <strong>Submitted Notes</strong>: 
+            <ul>
+              <li>
+                {{example.notes}}
+              </li>
+            </ul>
+          </p>
+          <p>
+            <button id="completed-btn">Completed</button> {{example.completed}}</p>
           <a href="/">← Back To Home</a>
         </div>
       </div>
