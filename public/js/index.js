@@ -18,7 +18,7 @@ var API = {
       },
       type: "POST",
       url: "api/tickets",
-      data: JSON.stringify(example)
+      data: example
     });
   },
   getExamples: function() {
@@ -28,10 +28,11 @@ var API = {
     });
   },
   updateExample: function(notes) {
+      console.log("notes", notes)
     return $.ajax({
       url: "/ticket/api/tickets",
       type: "PUT",
-      data: JSON.stringify(notes)
+      data: notes
     })
   },
   deleteExample: function(id) {
@@ -125,11 +126,11 @@ const handleNoteSubmit = function(event) {
   };
 
   API.updateExample(notes).then(function() {
-    console.log(notes);
     
     $notesText.val("");
   })
 };
+
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
