@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": password,
+    "password": "RFpd#2530",
     "database": "ticket_tracker_db",
     "host": "localhost",
     "dialect": "mysql"
