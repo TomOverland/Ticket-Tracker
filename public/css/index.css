@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* 
 header img {
   height: 200px;
@@ -18,7 +18,7 @@ header {
   height: 80px;
   display: flex;
   z-index:300;
-=======
+
 .navbar {
   border-radius: 15px;
 }
@@ -39,12 +39,12 @@ body {
 
 .card {
   max-height: fit-content;
->>>>>>> 7c03537f7b60007dedcffb5ec8e6fe55f5cd6788
 }
 
 header * {
   display: inline-block;
   align-items: top;
+
 }
 
 header li {
@@ -52,7 +52,7 @@ header li {
   float: top;
 }
 
-<<<<<<< HEAD
+
 li a{
   color:#70798C;
   text-decoration: none;
@@ -86,9 +86,46 @@ h1 {
 #body {
   color: #70798C;
 }
-=======
+
+}
+
+header li {
+  margin: 15px;
+  float: top;
+}
 
 
+li a{
+  color:#70798C;
+  text-decoration: none;
+}
 
+li a:hover {
+  color: #A99985;
+}
 
->>>>>>> 7c03537f7b60007dedcffb5ec8e6fe55f5cd6788
+body {
+  height: 100vh;
+  margin-top: 100px;
+  margin-left: 350px;
+  padding: 50px;
+}
+
+h1 {
+  background-color: White;
+  color: #252323;
+
+}
+
+#department {
+  color: #70798C;
+}
+
+#title {
+  color: #70798C;
+}
+
+#body {
+  color: #70798C;
+}
+
