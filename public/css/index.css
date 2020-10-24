@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 
 header img {
   height: 200px;
@@ -17,6 +18,28 @@ header {
   height: 80px;
   display: flex;
   z-index:300;
+=======
+.navbar {
+  border-radius: 15px;
+}
+
+.btn-dark {
+  float: right;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+#main {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card {
+  max-height: fit-content;
+>>>>>>> 7c03537f7b60007dedcffb5ec8e6fe55f5cd6788
 }
 
 header * {
@@ -29,6 +52,7 @@ header li {
   float: top;
 }
 
+<<<<<<< HEAD
 li a{
   color:#70798C;
   text-decoration: none;
@@ -62,3 +86,9 @@ h1 {
 #body {
   color: #70798C;
 }
+=======
+
+
+
+
+>>>>>>> 7c03537f7b60007dedcffb5ec8e6fe55f5cd6788
