@@ -1,15 +1,32 @@
 var db = require("../models");
+const path = require("path");
 
 module.exports = function(app) {
+  // Load index (login) page
+
   // Load index page
+  // Change route to "/index/" once login page is up
   app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+  });
+
+  // Load analytics page
+  app.get("/analytics", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/analytics.html"));
+  });
+
+
+  // load submit a ticket page
+  app.get("/submit/", function(req, res) {
     db.Ticket.findAll({}).then(function(dbTickets) {
+      
       res.render("submit", {
         msg: "Submit a Ticket",
       });
     });
   });
 
+  // load view all tickets page
   app.get("/ticket/", function(req, res) {
     db.Ticket.findAll({}).then(function(dbTickets) {
       res.render("viewtickets", {
