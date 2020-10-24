@@ -1,15 +1,30 @@
+.navbar {
+  border-radius: 15px;
+}
+
+.btn-dark {
+  float: right;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
 #main {
-    background-color: aqua;
-    height: 1000px;
     padding-top: 100px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
 .card {
-  height: 500px;
+  max-height: fit-content;
 }
 
 .multi-select {
   height: 200px;
 }
+
+
+
+
+
