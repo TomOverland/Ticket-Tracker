@@ -12,27 +12,36 @@ let $singleTicketId = "";
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
+    console.log("example", example);
+
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/tickets",
-      data: example
+      url: "/submit/api/tickets",
+      data: JSON.stringify(example)
     });
   },
   getExamples: function() {
     return $.ajax({
-      url: "api/tickets",
+      url: "/api/tickets",
       type: "GET"
     });
   },
   updateExample: function(notes) {
-      console.log("notes", notes)
     return $.ajax({
       url: "/ticket/api/tickets",
       type: "PUT",
       data: notes
+    })
+  },
+  updateCompleted: function(completed) {
+      console.log('updateCompleted', completed);
+    return $.ajax({
+      url: "/ticket/api/updated",
+      type: "PUT",
+      data: completed
     })
   },
   deleteExample: function(id) {
@@ -62,7 +71,11 @@ var refreshExamples = function() {
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");
 
-      $li.append($button);
+        var $button2 = $("<button>").attr("id=", example.id)
+        .addClass("btn btn-success float-right success")
+        .text(" done ");
+
+      $li.append($button, $button2);
 
       return $li;
     });
@@ -100,17 +113,22 @@ var handleFormSubmit = function(event) {
 // handleCompletedBtnClick is called when the "completed" button is clicked
 // Change the Ticket's data value of completed to false to true
 // -------------------------- NOT COMPLETE -----------------------------------
-const handleCompletedBtn = () => {
-  let idToUpdate = $(this)
-  .parent()
-  .attr("data-id");
+const handleCompletedBtn = (event) => {
+        console.log("event.target", event.target.id)
+        let idToUpdate = event.target.id;
+        console.log("idToUpdate", idToUpdate);
+    
+        let completed = {
+            id: idToUpdate,
+            completed: true
+        }
+      console.log("completed", completed);
 
-  console.log("idToUpdate", idToUpdate)
-
-  API.updateExample(idToUpdate).then(() => {
-    refreshExamples();
-  })
-}
+        API.updateCompleted(completed).then(() => {
+            console.log("then");
+          refreshExamples();
+        });
+    }
 
 // handleNoteSubmit is called when the notes button is clicked.
 // Change the ticket's notes value to the input of $notesText
@@ -126,11 +144,11 @@ const handleNoteSubmit = function(event) {
   };
 
   API.updateExample(notes).then(function() {
+    console.log(notes);
     
     $notesText.val("");
   })
 };
-
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
