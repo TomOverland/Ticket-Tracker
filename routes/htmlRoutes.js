@@ -10,6 +10,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
+  // Load analytics page
+  app.get("/analytics", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/analytics.html"));
+  });
+
+
   // load submit a ticket page
   app.get("/submit/", function(req, res) {
     db.Ticket.findAll({}).then(function(dbTickets) {
