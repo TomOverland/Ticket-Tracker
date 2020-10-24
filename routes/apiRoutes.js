@@ -18,13 +18,13 @@ module.exports = function(app) {
   // trying to get view single ticket to post notes
   app.put("/ticket/api/tickets", function(req, res, next) {
     
-    const reqNotes = JSON.parse(JSON.stringify(req.body));
-    console.log(reqNotes);
+    const reqNotes = req.body;
+
     db.Ticket.update(
       {notes: reqNotes.notes},
-      { where: { id: req.params.id }}).then(function(updatedTicket) {
+      { where: { id: req.body.id }}).then(function(updatedTicket) {
       res.json(updatedTicket);
-    }).catch(next)
+    }).catch(next);
   })
 
 // Update ticket status to complete
