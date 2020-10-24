@@ -39,18 +39,19 @@ body {
 
 .card {
   max-height: fit-content;
-
 }
 
 header * {
   display: inline-block;
   align-items: top;
+
 }
 
 header li {
   margin: 15px;
   float: top;
 }
+
 
 li a{
   color:#70798C;
@@ -85,3 +86,46 @@ h1 {
 #body {
   color: #70798C;
 }
+
+}
+
+header li {
+  margin: 15px;
+  float: top;
+}
+
+
+li a{
+  color:#70798C;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #A99985;
+}
+
+body {
+  height: 100vh;
+  margin-top: 100px;
+  margin-left: 350px;
+  padding: 50px;
+}
+
+h1 {
+  background-color: White;
+  color: #252323;
+
+}
+
+#department {
+  color: #70798C;
+}
+
+#title {
+  color: #70798C;
+}
+
+#body {
+  color: #70798C;
+}
+
