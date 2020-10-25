@@ -25,12 +25,14 @@
             </div>
           </form>
           <p>
-            <strong>Submitted Notes</strong>:
-          <ul>
-            <li>
-              {{example.notes}}
-            </li>
-          </ul>
+            <strong>Current Notes</strong>:
+          </p>
+          <p>
+            {{#if example.notes}}
+            {{example.notes}}
+            {{else}}
+            There are no notes to display.
+            {{/if}}
           </p>
           <a href="/">← Back To Home</a>
         </div>

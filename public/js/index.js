@@ -9,6 +9,7 @@ const $notesBtn = $("#note-btn");
 const $completedBtn = $("#completed-btn");
 let $singleTicketId = "";
 
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
