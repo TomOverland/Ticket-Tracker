@@ -1,9 +1,8 @@
 
-/* 
-header img {
-  height: 200px;
-  width: 200px;
-} */
+img {
+  margin-left: -40px;
+  margin-top: -20px;
+}
 
 main {
   color: black;
@@ -11,41 +10,41 @@ main {
 
 header {
   background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  /* position: relative; */
+  margin-top: -10px;
+  /* left: 0;
+  right: 0; */
   height: 80px;
-  display: flex;
-  z-index:300;
+  display: run-in;
+}
 
 .navbar {
   border-radius: 15px;
 }
 
-.btn-dark {
-  float: right;
+.container {
+  margin-top: 50px;
 }
 
-body {
+/* .btn-dark {
+  float: left;
+} */
+
+/* body {
   background-color: cornflowerblue;
-}
+} */
 
-#main {
-    padding-top: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
 
-.card {
+/* .card {
   max-height: fit-content;
-}
+  position: relative;
+} */
 
-header * {
+/* header * {
   display: inline-block;
   align-items: top;
 
-}
+} */
 
 header li {
   margin: 15px;
@@ -61,13 +60,13 @@ li a{
 li a:hover {
   color: #A99985;
 }
-
+/* 
 body {
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 350px;
   padding: 50px;
-}
+} */
 
 h1 {
   background-color: White;
@@ -87,7 +86,7 @@ h1 {
   color: #70798C;
 }
 
-}
+
 
 header li {
   margin: 15px;
@@ -106,9 +105,7 @@ li a:hover {
 
 body {
   height: 100vh;
-  margin-top: 100px;
-  margin-left: 350px;
-  padding: 50px;
+  padding: 10px;
 }
 
 h1 {
