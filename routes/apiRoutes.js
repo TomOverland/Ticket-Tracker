@@ -18,7 +18,7 @@ module.exports = function(app) {
     });
   });
 
-  // trying to get view single ticket to post notes
+  // Change note values from view single ticket page
   app.put("/ticket/api/tickets", function(req, res, next) {
     console.log("note entry");
     const reqNotes = req.body;
@@ -30,7 +30,7 @@ module.exports = function(app) {
     }).catch(next);
   })
 
-
+  // Change completed status to true from button on view all tickets page
   app.put("/ticket/api/updated", function(req, res, next) {
     console.log("apiRequest");
     const reqCompleted = req.body;

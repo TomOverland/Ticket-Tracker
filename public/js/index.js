@@ -113,7 +113,6 @@ var handleFormSubmit = function(event) {
 
 // handleCompletedBtnClick is called when the "completed" button is clicked
 // Change the Ticket's data value of completed to false to true
-// -------------------------- NOT COMPLETE -----------------------------------
 const handleCompletedBtn = (event) => {
         console.log("event.target", event.target.id)
         let idToUpdate = event.target.id;
@@ -133,7 +132,6 @@ const handleCompletedBtn = (event) => {
 
 // handleNoteSubmit is called when the notes button is clicked.
 // Change the ticket's notes value to the input of $notesText
-// ----------------------------------- NOT COMPLETE --------------------------------
 const handleNoteSubmit = function(event) {
   event.preventDefault();
 
@@ -146,7 +144,7 @@ const handleNoteSubmit = function(event) {
 
   API.updateExample(notes).then(function() {
     console.log(notes);
-    
+    location.reload();
     $notesText.val("");
   })
 };
