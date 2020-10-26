@@ -10,14 +10,9 @@ var session = require("express-session");
 var passport = require("./config/passport");
 
 var db = require("./models");
-
 var app = express();
-
-if (process.env.JAWSDB_URL) {
-  var connection = mysql.createConnection(process.env.JAWSDB_URL)
-}
-
 var PORT = process.env.PORT || 3000;
+
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
