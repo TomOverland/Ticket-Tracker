@@ -1,16 +1,4 @@
-body{
-    background-color: cornflowerblue;
-    
-}
 
-.navbar {
-    border-radius: 15px;
-  }
-
-#main{
-    padding-top: 50px;
-    
-}
 canvas {
     max-width: 100%;
     margin: 0 auto;
