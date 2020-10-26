@@ -7,23 +7,23 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Load index (login) page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../html/login.html"));
+    res.render("index", {layout: "login.handlebars"});
   });
 
-  // load singup page
+  // load signup page
   app.get("/signup", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+    res.render("signup", {layout: "login.handlebars"});
   });
 
   // Load index page
   // added isAuthenticated to this page, to check if the user has logged in.
   app.get("/index", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+    res.render("landing");
   });
 
   // Load analytics page
   app.get("/analytics", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/analytics.html"));
+    res.render("analyticsview", {layout: "analytics.handlebars"});
   });
 
 
