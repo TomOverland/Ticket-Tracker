@@ -13,7 +13,6 @@ let $singleTicketId = "";
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
-    console.log("example", example);
 
     return $.ajax({
       headers: {
@@ -38,7 +37,6 @@ var API = {
     })
   },
   updateCompleted: function(completed) {
-      console.log('updateCompleted', completed);
     return $.ajax({
       url: "/ticket/api/updated",
       type: "PUT",
@@ -114,18 +112,14 @@ var handleFormSubmit = function(event) {
 // handleCompletedBtnClick is called when the "completed" button is clicked
 // Change the Ticket's data value of completed to false to true
 const handleCompletedBtn = (event) => {
-        console.log("event.target", event.target.id)
         let idToUpdate = event.target.id;
-        console.log("idToUpdate", idToUpdate);
     
         let completed = {
             id: idToUpdate,
             completed: true
         }
-      console.log("completed", completed);
 
         API.updateCompleted(completed).then(() => {
-            console.log("then");
           refreshExamples();
         });
     }
@@ -143,7 +137,6 @@ const handleNoteSubmit = function(event) {
   };
 
   API.updateExample(notes).then(function() {
-    console.log(notes);
     location.reload();
     $notesText.val("");
   })
