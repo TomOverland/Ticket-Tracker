@@ -7,7 +7,7 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="/public/css/index.css">
+  <link rel="stylesheet" href="../css/index.css">
   {{!-- <header>
   <link rel="stylesheet" href="/public/css/index.css">
   <title>Ticket Tracker</title>
@@ -34,11 +34,22 @@
    </nav>
   
   </div> --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="https://i.ibb.co/M6NWdY4/nav-logo.png" alt="Time Tracker Small Logo" height="60"><a class="navbar-brand"
-      href="../HTML/index.html">Ticket Tracker</a>
-    <button type="button" class="btn btn-dark ml-auto">Logout</button>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="https://i.ibb.co/M6NWdY4/nav-logo.png" alt="Time Tracker Small Logo" height="60"><a class="navbar-brand"
+    href="/landing">Ticket Tracker</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/index">Home</a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="/submit">Submit a Ticket</a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="/ticket">View All Tickets</a></li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/analytics">Analytics</a></li>
+  </ul>
+  <button type="button" class="btn btn-dark ml-auto">Logout</button>
+</nav>
 
 
 <body>
