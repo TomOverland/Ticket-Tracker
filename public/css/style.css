@@ -1,4 +1,55 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body{
+  background-image: linear-gradient(to right, #2F4F4F, #70798c, #6495ED);
+}
+
+.navbar{
+  background-image: url("https://animals.sandiegozoo.org/sites/default/files/2017-12/kangaroo-paw-red-01.jpg"); 
+}
+
+.login{
+  width: 360px;
+  background: #f1f1f1;
+  height: 400px;
+  padding: 40px 40px;
+  border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+}
+
+.login h2{
+  text-align: center;
+  font-weight: 700;
+}
+
+h3{
+  font-size: small;
+  text-align: center;
+}
+
+.loginbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: linear-gradient(120deg, #70798c, #6495ed);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.loginbtn:hover{
+  background-position: right;
+}
+
+p{
+  text-align: center;
 }
