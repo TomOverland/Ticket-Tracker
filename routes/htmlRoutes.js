@@ -1,12 +1,23 @@
 var db = require("../models");
 const path = require("path");
 
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function(app) {
   // Load index (login) page
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/login.html"));
+  });
+
+  // load singup page
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+  });
 
   // Load index page
-  // Change route to "/index/" once login page is up
-  app.get("/", function(req, res) {
+  // added isAuthenticated to this page, to check if the user has logged in.
+  app.get("/index", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
