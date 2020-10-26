@@ -7,7 +7,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Load index (login) page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/login.html"));
+    res.sendFile(path.join(__dirname, "../html/login.html"));
   });
 
   // load singup page
