@@ -55,17 +55,13 @@ module.exports = function(app) {
 
   // Create a new ticket
   app.post("/submit/api/tickets", function(req, res) {
-    console.log('req.body', req.body);
-
     db.Ticket.create(req.body).then(function(dbTicket) {
-      
       res.json(dbTicket);
     });
   });
 
   // Change note values from view single ticket page
   app.put("/ticket/api/tickets", function(req, res, next) {
-    console.log("note entry");
     const reqNotes = req.body;
 
     db.Ticket.update(
@@ -77,9 +73,7 @@ module.exports = function(app) {
 
   // Change completed status to true from button on view all tickets page
   app.put("/ticket/api/updated", function(req, res, next) {
-    console.log("apiRequest");
     const reqCompleted = req.body;
-    console.log(reqCompleted);
 
     db.Ticket.update(
       {completed: reqCompleted.completed},
@@ -92,8 +86,6 @@ module.exports = function(app) {
 
 // Update ticket status to complete
   app.put("/api/tickets/:id", function(req, res) {
-    console.log("params", req.params);
-    console.log("body", req.body);
     
     db.Ticket.update({
       completed: true
