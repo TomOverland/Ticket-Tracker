@@ -2,7 +2,7 @@
 
 [Deployed on Heroku](https://fathomless-savannah-39390.herokuapp.com/).
 
-![Screenshot of Application](link)
+![Screenshot of Application](https://github.com/TomOverland/Ticket-Tracker/blob/main/public/assests/Screenshot%20of%20homepage.JPG)
 
 ## Description:
 
@@ -84,10 +84,6 @@ Lierin Hanuman: https://github.com/LLHanuman
 ## Tests:
 
 This application was not developed with any tests.
-
-## Demonstration
-
-- [YouTube](link-to-be-completed)
 
 ## Questions:
 
