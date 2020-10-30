@@ -38,7 +38,7 @@ By typing "npm install -i" you will download all of the dependencies required fo
 
 Go into your MySQL Workbench, and type the following, "CREATE DATABASE IF DOESNT EXIST ticket_tracker_db", then run execute.
 
-#### Step 6 - Start the application on your local server
+#### Step 7 - Start the application on your local server
 
 Type the following in your command line: "node server.js" and then go to the url "localhost:3000" in your internet browser.  When the server is run locally, Sequelize will create the User and Ticket tables in the database you've just created.
 
