@@ -75,11 +75,11 @@ For more information about the license, click the link below:
 
 ## Contributors:
 
-Tom Overland: https://github.com/TomOverland
-Nou Vang: https://github.com/nomvaa
-Kiki Peggs: https://github.com/Arkpeggs
-Anusha Dhamera: https://github.com/adhamera
-Lierin Hanuman: https://github.com/LLHanuman
+Tom Overland: https://github.com/TomOverland  
+Nou Vang: https://github.com/nomvaa  
+Kiki Peggs: https://github.com/Arkpeggs  
+Anusha Dhamera: https://github.com/adhamera  
+Lierin Hanuman: https://github.com/LLHanuman  
 
 ## Tests:
 
