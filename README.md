@@ -10,6 +10,10 @@ This application demonstrates a simple full stack development CRUD application w
 
 This is a service desk application that allows users to track issues by submitting and viewing tickets after they have created an account and logged in. Once the user has logged in, they can view most frequently asked questions, submit a new ticket, view all submitted tickets, or view analytics about the submitted tickets powered by Chart.js. Once tickets are submitted, you can update the ticket's notes, change the ticket's completed status to true, or remove the ticket from the database.
 
+Example log in:  
+Username: test@email.com  
+Password: 123  
+
 ## Installation:
 
 #### Step 1 - Make sure you have a code editor, MySQL, Node.js and Node Package Manager installed
