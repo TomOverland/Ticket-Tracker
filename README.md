@@ -8,11 +8,7 @@
 
 This application demonstrates a simple full stack development CRUD application with front end implemented with Handlebars and Bootstrap 4.  The backend is implemented with Node.js and sequelize.  The database was constructed with Sequelize and implemented to Heroku with JawsDB. 
 
-This is a service desk application that allows users to track issues by submitting and viewing tickets after they have created an account and logged in. Once the user has logged in, they can view most frequently asked questions, submit a new ticket, view all submitted tickets, or view analytics about the submitted tickets powered by Chart.js. Once tickets are submitted, you can update the ticket's notes, change the ticket's completed status to true, or remove the ticket from the database.
-
-Example log in:  
-Username: test@email.com  
-Password: 123  
+This is a service desk application that allows users to track issues by submitting, viewing, modifying, or deleting tickets. Users can also view analytics about the submitted tickets powered by Chart.js. Once tickets are submitted, you can update the ticket's notes, change the ticket's completed status to true, or remove the ticket from the database.
 
 ## Installation:
 
