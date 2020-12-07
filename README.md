@@ -68,12 +68,12 @@ Type the following in your command line: "node server.js" and then go to the url
 ## Project Management
 This project was completed during the Fall 2020 Full Stack Web Development Bootcamp.  Our cohort used a Trello Board to track the progress of our project. We completed mockups, built HTML pages based on those mockups, and translated those HTML pages to Handlebars once complete.  We then presented this project to our Bootcamp. Below you will be able to see our project mockups and a screenshot of our Trello Board.
 
-* Mockups
+### Mockups
 ![Mockup of Login](https://github.com/TomOverland/Ticket-Tracker/blob/main/public/assests/mockup-login.JPG)
 ![Mockup of Home Page](https://github.com/TomOverland/Ticket-Tracker/blob/main/public/assests/mockup-results.JPG)
 ![Mockup of Submit Ticket](https://github.com/TomOverland/Ticket-Tracker/blob/main/public/assests/mockup-submit.JPG)
 
-* Trello Board
+### Trello Board
 ![Screenshot of Trello Board](https://github.com/TomOverland/Ticket-Tracker/blob/main/public/assests/Trello-Board.JPG)
 
 ## License:
